@@ -26,11 +26,11 @@ public class Testen {
 
     private static int sumOdd(int x) {
         int acc = 0;
-        /*
+        
         for (int i = 0; i < x; i++) {
             acc += (1 + 2*i);
         }
-        */
+        
         return acc;
         // oder einfach x^2
     }

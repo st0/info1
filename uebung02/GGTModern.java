@@ -6,36 +6,6 @@
 public class GGTModern {
 
 	public static void
-	printStep(String fmt, int x, int y) {
-		String code = String.format(fmt, x, y);
-		System.out.println(String.format("| %d\t| %d\t| %s",
-			x, y, code));
-	}
-
-    public static int 
-	euklidKlassisch(int x, int y){// Wertuebernahme
-		String pre = "";
-		System.out.println("| x\t| y\t| Code");
-			printStep("euklidKlassisch(%d, %d)", x, y);
-		while ( y != 0) {// y ungleich 0?
-			printStep("  while(%d != %d)", x, y);
-			printStep("    if(%d > %d)", x, y);
-			if ( x > y) {
-				pre = String.format("      x = %d - %d", x, y);
-				x = x - y;
-				printStep(pre, x, y);
-			} else {
-				pre = String.format("      y = %d - %d", y, x);
-				y = y - x;
-				printStep(pre, x, y);
-			}
-		}
-		printStep("while(0 != 0)", x, y);
-		printStep("return %d", x, y);
-		return x; // Wertauslieferung
-		}    
-
-	public static void
 	printStep3(String fmt, int x, int y, Object r) {
 		String code = String.format(fmt, x, y, r);
 		System.out.println(String.format("| %d\t| %d\t| %s\t| %s",
@@ -64,15 +34,10 @@ public class GGTModern {
 			y = r;
 			printStep3("    y = %3$d", x, y, r);
 		}
-		printStep3("return %d", x, y, "-");
+		printStep3("  while(0 != 0)", x, y, r);
+		printStep3("  return %d", x, y, "-");
 		return x; // Wertauslieferung
     }    
-    
-    public static int euklidRekursiv (int x, int y) {
-	if ( y == 0) 
-	    return x;
-	return euklidRekursiv ( y, x % y);
-    }
     
     public static void main( String[] args){ 
 	int a = Integer.parseInt(args[0]); // Wertuebernahme von ..

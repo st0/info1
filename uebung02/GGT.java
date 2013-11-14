@@ -30,8 +30,8 @@ public class GGT {
 				printStep(pre, x, y);
 			}
 		}
-		printStep("while(0 != 0)", x, y);
-		printStep("return %d", x, y);
+		printStep("  while(0 != 0)", x, y);
+		printStep("  return %d", x, y);
 		return x; // Wertauslieferung
 		}    
 

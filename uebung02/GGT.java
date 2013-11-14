@@ -18,7 +18,7 @@ public class GGT {
 		System.out.println("| x\t| y\t| Code");
 			printStep("euklidKlassisch(%d, %d)", x, y);
 		while ( y != 0) {// y ungleich 0?
-			printStep("  while(%d != 0)", x, y);
+			printStep("  while(%2$d != 0)", x, y);
 			printStep("    if(%d > %d)", x, y);
 			if ( x > y) {
 				pre = String.format("      x = %d - %d", x, y);

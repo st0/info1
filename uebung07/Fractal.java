@@ -64,20 +64,6 @@ public class Fractal {
 		}	
 	}
 
-	public static String levyC(int order) {
-
-		String result = "F";
-		for (int i = 0; i < order; i++) {
-			result = "+" + result + "--" + result + "+";
-		}
-		result = result.replaceAll("^\\++", "").replaceAll("\\++$", "");
-		result = result.replace("+--+", "");
-		result = result.replace("++", "R");
-		result = result.replace("--", "L");
-		return result;
-		
-	}
-
 	public static char[] iterateLevyC(char[] array) {
 		// Create the representation of a Levy C curve of order i+1
 		// given one of order i.
@@ -90,7 +76,6 @@ public class Fractal {
 		);
 		return result;
 	}
-
 	
 	public static int simplifyLevyC(char[] array) {
 		// Convert even numbers of '+'s and '-'s to Rs and Ls,
@@ -125,8 +110,6 @@ public class Fractal {
 		return offset;
 		
 	}
-
-	
 
 	public static char[] concatenateCharArrays(char[]... arrays) {
 		// Helper function

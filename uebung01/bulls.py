@@ -23,7 +23,7 @@ def main(n):
         if bulls == n:
             break
         cows = int(y)
-        print(bulls, cows)
+        #print(bulls, cows)
         candidates = [candidate for candidate in candidates
                       if score(guess, candidate) == (bulls, cows)]
         if not candidates:

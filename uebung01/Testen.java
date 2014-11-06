@@ -4,24 +4,12 @@ public class Testen {
     public static void main( String[] args){
         int a = Integer.parseInt(args[0]);
         // Nehme den Betrag von a
-        a = abs(a);
+        a = Math.abs(a);
         // Berechne Summe der ersten n=a ungeraden (ganzen) Zahlen
         a = sumOdd(a);
 
 
     System.out.println(a);
-    }
-
-    /**
-     * Betragsfunktion
-     * abs(1) == abs(-1) == 1
-     */
-    private static int abs(int x) {
-        if (x < 0) {
-            return -x;
-        } else {
-            return x;
-        }
     }
 
     private static int sumOdd(int x) {

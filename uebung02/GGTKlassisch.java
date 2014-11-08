@@ -1,8 +1,3 @@
-/* Time-stamp: <2013-08-13 12:44:06 damm>
-   Quelltextsammlung fuer Informatik I */
-
-
-
 public class GGTKlassisch {
 
 	public static void
@@ -12,7 +7,7 @@ public class GGTKlassisch {
 			x, y, code));
 	}
 
-    public static int 
+    public static int
 	euklidKlassisch(int x, int y){// Wertuebernahme
 		String pre = "";
 		System.out.println("| x\t| y\t| Code");
@@ -33,9 +28,9 @@ public class GGTKlassisch {
 		printStep("  while(0 != 0)", x, y);
 		printStep("  return %d", x, y);
 		return x; // Wertauslieferung
-		}    
-    
-    public static void main( String[] args){ 
+		}
+
+    public static void main( String[] args){
 	int a = Integer.parseInt(args[0]); // Wertuebernahme von ..
 	int b = Integer.parseInt(args[1]); // .. Kommandozeile
 	if ( a <= 0 || b <= 0) // '||' steht fuer 'oder'
@@ -44,5 +39,5 @@ public class GGTKlassisch {
 	d = euklidKlassisch(a,b); // Methodenaufruf
 	//d = euklidModern(a, b);
 	//System.out.println(d); // Bildschirmausgabe
-    } 
+    }
 }
